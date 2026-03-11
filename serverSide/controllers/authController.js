@@ -38,7 +38,7 @@ try {
 const varify=async(req,res)=>{
     try {
         const {email,otp}=req.body;
-        const validOtp= await Otp.findOne({email,otp,type:"account_verification"});
+        const validOtp= await Otp.findOne({email,otp,type:"account varification"});
         if(!validOtp){
           return res.status(400).json({"msg":"invailid otp or expires otp"})
         }
