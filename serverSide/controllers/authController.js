@@ -37,6 +37,14 @@ try {
 
 const varify=async(req,res)=>{
     try {
+        const {email,otp}=req.body;
+        const validOtp= await Otp.findOne({email,otp,type:"account_verification"});
+        if(!validOtp){
+          return res.status(400).json({"msg":"invailid otp or expires otp"})
+        }
+        const user=await User.findOneAndUpdate({email},{isVerified:true},{new:true});
+        await Otp.deleteOne({_id:validOtp._id})
+        res.status(200).json({"msg":"email verified"})
             
     } catch (error) {
          res.status(500).json({"msg":"internal error",error})

@@ -23,7 +23,7 @@ const authSchema=new mongoose.Schema({
         enum:["user","admin"],
         default:"user"
     },
-    isVarified:{
+    isVerified:{
         type:Boolean,
         default:false
     }
