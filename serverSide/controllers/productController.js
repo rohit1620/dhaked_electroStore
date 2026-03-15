@@ -1,3 +1,4 @@
+const Product= require("../models/productSchema")
 
 const getProduct=async(req,res)=>{
     try {
@@ -17,7 +18,8 @@ const getProductById=async(req,res)=>{
 
 const addProduct=async(req,res)=>{
     try {
-            
+        await Product.create(req.body);
+        res.status(200).json({"msg":"Product successfully added"}) 
     } catch (error) {
           res.status(500).json({"msg":"internal error",error})
     }
