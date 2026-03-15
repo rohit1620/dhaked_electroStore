@@ -1,3 +1,4 @@
+const Cart=require("../models/cartSchema")
 
 const getCart=async(req,res)=>{
     try {
@@ -11,6 +12,22 @@ const getCart=async(req,res)=>{
 
 const addToCart=async(req,res)=>{
     try {
+      const {userId,productId}=req.body;
+      console.log("req.body",userId,productId)
+      let cart= await Cart.findOne({userId});
+       console.log("cart me",cart)
+      if(!cart){
+        cart = new Cart({userId,items:[{productId,quantity:1}]});
+      }else{
+          const item=cart.items.find((i)=>i.productId.toString()===productId);
+          if(item){
+            item.quantity+=1;
+          }else{
+            cart.items.push({productId,quantity:1})
+          }
+      }
+      await cart.save();
+      res.status(200).json({"msg":"add cart item"})
             
     } catch (error) {
          res.status(500).json({"msg":"internal error",error})
