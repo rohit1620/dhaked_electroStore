@@ -2,9 +2,9 @@ const {getCart,addToCart,updateQuantity,deleteCart}=require("../controllers/cart
 const express=require("express");
 
 const router=express.Router();
-router.route("/").get(getCart);
+router.route("/:id").get(getCart);
 router.route("/add").post(addToCart);
-router.route("/update").post(updateQuantity);
-router.route("/delete").post(deleteCart)
+router.route("/update").patch(updateQuantity);
+router.route("/delete").delete(deleteCart)
 
 module.exports=router;
