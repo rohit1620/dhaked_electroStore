@@ -10,8 +10,6 @@ const getCart=async(req,res)=>{
     }
 }
 
-
-
 const addToCart=async(req,res)=>{
     try {
       const {userId,productId}=req.body;
