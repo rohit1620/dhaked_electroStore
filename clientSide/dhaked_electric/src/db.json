@@ -1,0 +1,84 @@
+{
+  "electronics": [
+    {
+      "id": 1,
+      "name": "Sony Wireless Headphones",
+      "category": "Audio",
+      "price": 4999,
+      "brand": "Sony",
+      "image_url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 15 Pro",
+      "category": "Mobile",
+      "price": 129999,
+      "brand": "Apple",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfIKZtg95BcJfA5z8NbBD1Bl-rAuMPVWKXfQ&s"
+    },
+    {
+      "id": 3,
+      "name": "ROG Gaming Laptop",
+      "category": "Computers",
+      "price": 95000,
+      "brand": "Asus",
+      "image_url": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Galaxy Watch 6",
+      "category": "Wearables",
+      "price": 24999,
+      "brand": "Samsung",
+      "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"
+    },
+    {
+      "id": 5,
+      "name": "Portable Bluetooth Speaker",
+      "category": "Audio",
+      "price": 2999,
+      "brand": "JBL",
+      "image_url": "https://images.unsplash.com/photo-1608156639585-34a0a5625594?w=500&q=80"
+    },
+    {
+      "id": 6,
+      "name": "Mechanical Keyboard",
+      "category": "Accessories",
+      "price": 4500,
+      "brand": "Keychron",
+      "image_url": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=500&q=80"
+    },
+    {
+      "id": 7,
+      "name": "Mirrorless Camera",
+      "category": "Photography",
+      "price": 68000,
+      "brand": "Fujifilm",
+      "image_url": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=80"
+    },
+    {
+      "id": 8,
+      "name": "iPad Air",
+      "category": "Mobile",
+      "price": 54000,
+      "brand": "Apple",
+      "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&q=80"
+    },
+    {
+      "id": 9,
+      "name": "Gaming Mouse",
+      "category": "Accessories",
+      "price": 3200,
+      "brand": "Logitech",
+      "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&q=80"
+    },
+    {
+      "id": 10,
+      "name": "Curved Gaming Monitor",
+      "category": "Computers",
+      "price": 22000,
+      "brand": "MSI",
+      "image_url": "https://png.pngtree.com/png-clipart/20250523/original/pngtree-modern-laptop-computer-with-screen-open-technology-digital-device-png-image_21059292.png"
+    }
+  ]
+}

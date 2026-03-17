@@ -1,10 +1,15 @@
 import React from "react";
+import Navbar from "./components/Navbar";
+import AllRoutes from "./pages/AllRoutes";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-blue-800">App component</h1>
-    </div>
+    <>
+      <Navbar />
+      <AllRoutes />
+      <Footer />
+    </>
   );
 };
 
