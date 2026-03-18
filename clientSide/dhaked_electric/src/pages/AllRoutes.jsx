@@ -11,16 +11,18 @@ import PageNotFound from "./PageNotFound";
 
 const AllRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/product" element={<Product />} />
-      <Route path="cart" element={<Cart />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/singup" element={<Singup />} />
-      <Route path="/productdetails:id" element={<ProductDetails />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="*" element={<PageNotFound />} />
-    </Routes>
+    <main className="pt-15">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/singup" element={<Singup />} />
+        <Route path="/productdetails:id" element={<ProductDetails />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </main>
   );
 };
 
