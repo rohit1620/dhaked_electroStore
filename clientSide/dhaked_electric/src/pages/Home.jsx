@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
 import data from "../db.json";
+// import Swiper from "swiper";
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 let datas = data.electronics;
 
@@ -143,6 +149,158 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="pt-10">
+        <Swiper
+          navigation={true}
+          pagination={true}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
+          speed={2000}
+          loop={true}
+          modules={[Navigation, Pagination, Autoplay]}
+          slidesPerView={3}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRA0_c4qiaq_l5K1M3dRVSX11cPtEOtFItWA&s"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjN75Yp-tsy7f3A9C0XIwS8fIkRe_PgzQMyg&s"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIrbinOldPCaoFrVtPiCm-btvi4ZqvG4U8HA&s"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlD1dcE5geFrZEoziyaLbN_tbvlb_QPmXpyg&s"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUs-Ae8WOix_w7ABGTrlAaFaL9PGARKXbhAQ&s"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqJ5foUVi76SIkszzmZJANbXdxoBvJ3aoO2Q&s"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://www.intex.in/cdn/shop/files/LED-SHF3263.jpg?v=1750331049"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://thomsonhome.in//wp-content/uploads/2025/03/43505565771000x1000-500x500.webp"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-[400px]">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
+                alt=""
+                className="w-full h-[300px] "
+              />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );
