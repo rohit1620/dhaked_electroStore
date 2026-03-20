@@ -21,10 +21,10 @@ const register=async(req,res)=>{
            const salt=await bcrypt.genSalt(10)
            const hashPassword=await bcrypt.hash(password,salt)
         await User.create({username,email,password:hashPassword,phone})
-        const otp=generateOpt();
-        console.log("opt",otp)
-        await Otp.create({email,otp,type:"account varification"})
-        await sendOtpMail(email,otp,"account varification")
+        // const otp=generateOpt();
+        // console.log("opt",otp)
+        // await Otp.create({email,otp,type:"account varification"})
+        // await sendOtpMail(email,otp,"account varification")
         res.status(200).json({"msg":"register successfully"})
     } catch (error) {
          res.status(500).json({"msg":"internal error",error})
@@ -42,13 +42,13 @@ try {
          if(!isMatch){
             return res.status(400).json({"msg":"Invailid credentials"})
          }
-         if(!userExist.isVerified && userExist.role!=="admin"){
-            const otp=generateOpt();
-            await Otp.findOneAndDelete({email,type:"account varification"})
-            await Otp.create({email,otp,type:"account varification"});
-            await sendOtpMail(email,otp,"account varification");
-            res.status(400).json({"msg":"Account not verified",needsVerification:true,email:userExist.email})
-         }
+        //  if(!userExist.isVerified && userExist.role!=="admin"){
+        //     const otp=generateOpt();
+        //     await Otp.findOneAndDelete({email,type:"account varification"})
+        //     await Otp.create({email,otp,type:"account varification"});
+        //     await sendOtpMail(email,otp,"account varification");
+        //     res.status(400).json({"msg":"Account not verified",needsVerification:true,email:userExist.email})
+        //  }
          res.status(200).json({"msg":"Login successfully",id:userExist._id,name:userExist.name,role:userExist.role,email:userExist.email,token:generateToken(userExist._id,userExist.role)})
 } catch (error) {
      res.status(500).json({"msg":"internal error",error})

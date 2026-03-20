@@ -1,21 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
+import api from "../api/axios";
 
 const Singup = () => {
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    phone: "",
+  });
+  const handleForm = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    console.log("set form", formData);
+  };
+  const submitForm = async (e) => {
+    e.preventDefault();
+    const data = await api.post("/auth/register", formData);
+    console.log(data?.data);
+    alert(data?.data?.msg);
+    setFormData({
+      username: "",
+      email: "",
+      password: "",
+      phone: "",
+    });
+  };
   return (
     <div className="h-screen pt-20 bg-amber-600">
       <form
         action=""
         className="w-max py-8 px-7    m-auto rounded-xl bg-gray-300 shadow-form"
+        onSubmit={submitForm}
       >
         <h3 className="text-2xl text-green-900  italic font-bold mb-3">
           Register Form
         </h3>
         <input
           type="text"
-          name="user"
+          name="username"
           id="user"
           placeholder="Enter Name"
           className="border rounded-md"
+          value={formData.username}
+          onChange={handleForm}
         />{" "}
         <br />
         <br />
@@ -25,6 +52,8 @@ const Singup = () => {
           id="email"
           placeholder="Enter Email"
           className="border rounded-md"
+          value={formData.email}
+          onChange={handleForm}
         />
         <br />
         <br />
@@ -34,6 +63,8 @@ const Singup = () => {
           id="password"
           placeholder="Enter Password"
           className="border rounded-md"
+          value={formData.password}
+          onChange={handleForm}
         />
         <br />
         <br />
@@ -43,6 +74,8 @@ const Singup = () => {
           id="phone"
           placeholder="Enter phone"
           className="border rounded-md"
+          value={formData.phone}
+          onChange={handleForm}
         />
         <br />
         <br />

@@ -12,40 +12,42 @@ let datas = data.electronics;
 console.log(datas.length);
 
 const Home = () => {
-  const data_length = datas.length;
-  const [index, setIndex] = useState(0);
-  const handleNext = () => {
-    setIndex((prev) => {
-      if (prev == data_length - 1) {
-        console.log("inside", prev);
-        return 0;
-      }
-      console.log("outside", prev);
-      return prev + 1;
-    });
-    // if (index == data_length - 1) {
-    //   setIndex(0);
-    // } else {
-    //   setIndex(index + 1);
-    // }
-  };
-  const handlePrev = () => {
-    if (index == 0) {
-      setIndex(data_length - 1);
-    } else {
-      setIndex(index - 1);
-    }
-  };
+  // ######## Custom slide make
+  // const data_length = datas.length;
+  // const [index, setIndex] = useState(0);
+  // const handleNext = () => {
+  //   setIndex((prev) => {
+  //     if (prev == data_length - 1) {
+  //       console.log("inside", prev);
+  //       return 0;
+  //     }
+  //     console.log("outside", prev);
+  //     return prev + 1;
+  //   });
+  //   // if (index == data_length - 1) {
+  //   //   setIndex(0);
+  //   // } else {
+  //   //   setIndex(index + 1);
+  //   // }
+  // };
+  // const handlePrev = () => {
+  //   if (index == 0) {
+  //     setIndex(data_length - 1);
+  //   } else {
+  //     setIndex(index - 1);
+  //   }
+  // };
 
-  useEffect(() => {
-    let intervalId = setInterval(handleNext, 2000);
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+  // useEffect(() => {
+  //   let intervalId = setInterval(handleNext, 2000);
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   };
+  // }, []);
 
   return (
     <div>
+      {/* custom slide make
       <div className="relative">
         <div
           onClick={handlePrev}
@@ -56,7 +58,8 @@ const Home = () => {
         <img
           src={datas[index].image_url}
           alt="image not found"
-          className="w-full h-screen"
+          className="w-full h-screen "
+          // style={{ transform: `translateX(-${index * 100}%)` }}
         />
         <div
           onClick={handleNext}
@@ -64,7 +67,94 @@ const Home = () => {
         >
           {">"}
         </div>
-      </div>
+      </div> */}
+
+      <Swiper
+        navigation={true}
+        pagination={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        // effect="fade"
+        modules={[Navigation, Pagination, Autoplay]}
+        speed={2000}
+        slidesPerView={1}
+        loop={true}
+        direction="horizontal"
+        // modules={[EffectFade]}
+      >
+        <SwiperSlide>
+          <img
+            src="https://www.atlanticdelhi.com/flash_images/5699banner1.png"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://thumbs.dreamstime.com/b/washing-machine-colorful-clothes-spilling-out-showcasing-laundry-day-modern-open-door-revealing-mix-image-371138609.jpg"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&q=80"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://3.imimg.com/data3/TB/KQ/MY-238885/videocon-ha-500x500.jpg"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://5.imimg.com/data5/SELLER/Default/2025/11/557761819/KY/GN/PA/253575770/plywood-tv-unit-500x500.jpg"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2025-03/Mixer%20grinder.jpg"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnruxkS_C-PUdr74zxSYpEWUPzZ0Eyvvsaog&s"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&q=80"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndqL4EUuGrAKHtoEP9lGr8E_qbO5NXBpKQw&s"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://www.maytag.com/is/image/content/dam/business-unit/maytag/en-us/marketing-content/site-assets/page-content/oc-articles/types-of-refrigerators/Types-of-Refrigerators-Image4M_v2.jpg?$atomic-mobile$&fit=constrain&fmt=webp-alpha&qlt=100&bfc=off"
+            alt="image not found"
+            className="w-full h-screen "
+          />
+        </SwiperSlide>
+      </Swiper>
       {/* about store section */}
       <div className="md:flex px-8 md:my-10">
         <div className="md:w-1/2 pt-5">
