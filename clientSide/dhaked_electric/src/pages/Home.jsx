@@ -101,7 +101,7 @@ const Home = () => {
       </div>
       {/* our services section  */}
       {/* className="bg-pink-100" */}
-      <div className="bg-pink-100 pt-4">
+      <div className="bg-pink-100 py-5">
         <div className="w-[85%] m-auto ">
           <h1 className="text-4xl font-bold italic text-center mb-8  ">
             Our Services
@@ -150,6 +150,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <h1 className="text-4xl font-bold italic text-center my-5 text-green-600  ">
+        Product Offers
+      </h1>
       <div className="pt-10">
         <Swiper
           navigation={true}
@@ -176,6 +179,11 @@ const Home = () => {
         >
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRA0_c4qiaq_l5K1M3dRVSX11cPtEOtFItWA&s"
                 alt=""
@@ -185,6 +193,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjN75Yp-tsy7f3A9C0XIwS8fIkRe_PgzQMyg&s"
                 alt=""
@@ -194,6 +207,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIrbinOldPCaoFrVtPiCm-btvi4ZqvG4U8HA&s"
                 alt=""
@@ -203,6 +221,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlD1dcE5geFrZEoziyaLbN_tbvlb_QPmXpyg&s"
                 alt=""
@@ -212,6 +235,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUs-Ae8WOix_w7ABGTrlAaFaL9PGARKXbhAQ&s"
                 alt=""
@@ -221,6 +249,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqJ5foUVi76SIkszzmZJANbXdxoBvJ3aoO2Q&s"
                 alt=""
@@ -230,6 +263,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
                 alt=""
@@ -239,6 +277,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://www.intex.in/cdn/shop/files/LED-SHF3263.jpg?v=1750331049"
                 alt=""
@@ -248,6 +291,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
                 alt=""
@@ -257,6 +305,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://thomsonhome.in//wp-content/uploads/2025/03/43505565771000x1000-500x500.webp"
                 alt=""
@@ -266,6 +319,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
                 alt=""
@@ -275,6 +333,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
                 alt=""
@@ -284,6 +347,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
                 alt=""
@@ -293,6 +361,11 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[400px]">
+              <p className="text-center text-bold italic text-xl text-green-700">
+                Price:<span className="text-red-400 line-through"> 45354 </span>
+                <span className="text-green-500"> 25455 </span>
+                <span className="text-yellow-600"> 30%-off </span>
+              </p>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
                 alt=""
