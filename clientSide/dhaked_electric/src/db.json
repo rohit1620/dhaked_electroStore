@@ -6,7 +6,7 @@
       "category": "Audio",
       "price": 4999,
       "brand": "Sony",
-      "image_url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+      "image_url": "https://www.atlanticdelhi.com/flash_images/5699banner1.png"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "category": "Mobile",
       "price": 129999,
       "brand": "Apple",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfIKZtg95BcJfA5z8NbBD1Bl-rAuMPVWKXfQ&s"
+      "image_url": "https://thumbs.dreamstime.com/b/washing-machine-colorful-clothes-spilling-out-showcasing-laundry-day-modern-open-door-revealing-mix-image-371138609.jpg"
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "category": "Wearables",
       "price": 24999,
       "brand": "Samsung",
-      "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"
+      "image_url": "https://3.imimg.com/data3/TB/KQ/MY-238885/videocon-ha-500x500.jpg"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "category": "Audio",
       "price": 2999,
       "brand": "JBL",
-      "image_url": "https://images.unsplash.com/photo-1608156639585-34a0a5625594?w=500&q=80"
+      "image_url": "https://5.imimg.com/data5/SELLER/Default/2025/11/557761819/KY/GN/PA/253575770/plywood-tv-unit-500x500.jpg"
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "category": "Accessories",
       "price": 4500,
       "brand": "Keychron",
-      "image_url": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=500&q=80"
+      "image_url": "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2025-03/Mixer%20grinder.jpg"
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "category": "Photography",
       "price": 68000,
       "brand": "Fujifilm",
-      "image_url": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=80"
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnruxkS_C-PUdr74zxSYpEWUPzZ0Eyvvsaog&s"
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "category": "Accessories",
       "price": 3200,
       "brand": "Logitech",
-      "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&q=80"
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndqL4EUuGrAKHtoEP9lGr8E_qbO5NXBpKQw&s"
     },
     {
       "id": 10,
@@ -78,7 +78,7 @@
       "category": "Computers",
       "price": 22000,
       "brand": "MSI",
-      "image_url": "https://png.pngtree.com/png-clipart/20250523/original/pngtree-modern-laptop-computer-with-screen-open-technology-digital-device-png-image_21059292.png"
+      "image_url": "https://www.maytag.com/is/image/content/dam/business-unit/maytag/en-us/marketing-content/site-assets/page-content/oc-articles/types-of-refrigerators/Types-of-Refrigerators-Image4M_v2.jpg?$atomic-mobile$&fit=constrain&fmt=webp-alpha&qlt=100&bfc=off"
     }
   ]
 }
