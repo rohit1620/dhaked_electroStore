@@ -37,6 +37,15 @@ const addProduct=async(req,res)=>{
     }
 }
 
+const addManyProduct=async(req,res)=>{
+    try {
+         await Product.insertMany(req.body);
+        res.status(200).json({"msg":"Many Product successfully added"}) 
+    } catch (error) {
+        res.status(500).json({"msg":"internal error",error})
+    }
+}
+
 const updateProduct=async(req,res)=>{
     try {
  const {id}=req.params
@@ -57,4 +66,4 @@ const deleteProduct=async(req,res)=>{
     }
 }
 
-module.exports={getProduct,addProduct,updateProduct,deleteProduct,getProductById}
+module.exports={getProduct,addProduct,updateProduct,deleteProduct,getProductById,addManyProduct}
