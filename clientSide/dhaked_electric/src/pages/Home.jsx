@@ -191,7 +191,7 @@ const Home = () => {
       </div>
       {/* our services section  */}
       {/* className="bg-pink-100" */}
-      <div className="bg-pink-100 py-5">
+      <div className="bg-pink-100 py-5 ">
         <div className="w-[85%] m-auto ">
           <h1 className="text-4xl font-bold italic text-center mb-8  ">
             Our Services

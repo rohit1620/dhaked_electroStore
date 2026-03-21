@@ -14,12 +14,29 @@ const product = () => {
   }, []);
   return (
     <div className="flex">
-      <div className=" w-64 h-screen fixed left-0 top-15 z-50 bg-pink-200 shadow-sidebar">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero ut rem
-        aperiam exercitationem maiores aliquam nesciunt doloremque voluptas
-        asperiores delectus earum nostrum minima, sit quod voluptatem quo
-        tempora vel totam!
+      <div className=" w-64 h-screen fixed left-0 top-15 z-50 bg-pink-200 shadow-sidebar flex flex-col gap-y-1 m-auto pl-20 pt-4">
+        <h1 className="text-2xl text-blue-600 mb-2 italic font-bold">
+          category
+        </h1>
+        <div className="flex items-center gap-2">
+          <input type="checkbox" name="" id="" />
+
+          <label htmlFor="">Tv</label>
+        </div>
+        <div className="flex items-center gap-2">
+          <input type="checkbox" name="" id="" />
+          <label htmlFor="">Frize</label>
+        </div>
+        <div className="flex items-center gap-2">
+          <input type="checkbox" name="" id="" />
+          <label htmlFor="">Coolar</label>
+        </div>
+        <div className="flex items-center gap-2">
+          <input type="checkbox" name="" id="" />
+          <label htmlFor="">whashing</label>
+        </div>
       </div>
+
       <div className="  mx-64 px-10 grid grid-cols-3 gap-5 pt-7 bg-pink-200">
         {data && data.map((el, index) => <ProductItem item={el} key={index} />)}
       </div>
