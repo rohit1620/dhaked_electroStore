@@ -156,7 +156,7 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
       {/* about store section */}
-      <div className="md:flex px-8 md:my-10">
+      <div className="md:flex px-8  py-16">
         <div className="md:w-1/2 pt-5">
           <h2 className="font-bold text-3xl text-center mb-2 italic">
             About Our Store
@@ -191,47 +191,48 @@ const Home = () => {
       </div>
       {/* our services section  */}
       {/* className="bg-pink-100" */}
-      <div className="bg-pink-100 py-5 ">
-        <div className="w-[85%] m-auto ">
-          <h1 className="text-4xl font-bold italic text-center mb-8  ">
+      <div className="bg-pink-100 py-12 ">
+        <div className="w-[80%] m-auto ">
+          <h1 className="text-4xl font-bold italic text-center mb-10  ">
             Our Services
           </h1>
-          <div className="grid  grid-cols-[repeat(1,1fr)] lg:grid-cols-[repeat(4,1fr)] sm:grid-cols-[repeat(2,1fr)] gap-x-5 gap-y-6 sm:gap-y-0">
-            <div className="shadow-service bg-yellow-300">
+          {/* grid  grid-cols-[repeat(1,1fr)] lg:grid-cols-[repeat(4,1fr)] sm:grid-cols-[repeat(2,1fr)] gap-x-5 gap-y-6 sm:gap-y-0 */}
+          <div className="md:flex gap-5  ">
+            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
               <img
                 src="https://png.pngtree.com/background/20230808/original/pngtree-digital-devices-for-productivity-laptop-mobile-phone-and-tablet-pc-photo-picture-image_4512002.jpg"
                 alt=""
-                className="w-full h-[350px]"
+                className="w-full h-[350px] rounded-t-2xl"
               />
               <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2">
                 Laptop & Mobiles
               </h3>
             </div>
-            <div className="shadow-service bg-yellow-300">
+            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
               <img
                 src="https://images.hindustantimes.com/tech/img/2024/03/23/1600x900/sgddxgfhhc_1711231456166_1711231463102.jpg"
                 alt=""
-                className="w-full h-[350px] "
+                className="w-full h-[350px] rounded-t-2xl"
               />
               <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2">
                 Laptop & Mobiles
               </h3>
             </div>
-            <div className="shadow-service bg-yellow-300">
+            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
               <img
                 src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
                 alt=""
-                className="w-full h-[350px] "
+                className="w-full h-[350px] rounded-t-2xl"
               />
               <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2">
                 Laptop & Mobiles
               </h3>
             </div>
-            <div className="shadow-service bg-yellow-300">
+            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
                 alt=""
-                className="w-full h-[350px] "
+                className="w-full h-[350px] rounded-t-2xl"
               />
               <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2">
                 Laptop & Mobiles
@@ -240,230 +241,247 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-4xl font-bold italic text-center my-5 text-green-600  ">
-        Product Offers
-      </h1>
-      <div className="pt-10">
-        <Swiper
-          navigation={true}
-          pagination={true}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
-          }}
-          speed={2000}
-          loop={true}
-          modules={[Navigation, Pagination, Autoplay]}
-          slidesPerView={3}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            640: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRA0_c4qiaq_l5K1M3dRVSX11cPtEOtFItWA&s"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjN75Yp-tsy7f3A9C0XIwS8fIkRe_PgzQMyg&s"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIrbinOldPCaoFrVtPiCm-btvi4ZqvG4U8HA&s"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlD1dcE5geFrZEoziyaLbN_tbvlb_QPmXpyg&s"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUs-Ae8WOix_w7ABGTrlAaFaL9PGARKXbhAQ&s"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqJ5foUVi76SIkszzmZJANbXdxoBvJ3aoO2Q&s"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://www.intex.in/cdn/shop/files/LED-SHF3263.jpg?v=1750331049"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://thomsonhome.in//wp-content/uploads/2025/03/43505565771000x1000-500x500.webp"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-[400px]">
-              <p className="text-center text-bold italic text-xl text-green-700">
-                Price:<span className="text-red-400 line-through"> 45354 </span>
-                <span className="text-green-500"> 25455 </span>
-                <span className="text-yellow-600"> 30%-off </span>
-              </p>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
-                alt=""
-                className="w-full h-[300px] "
-              />
-            </div>
-          </SwiperSlide>
-        </Swiper>
+
+      <div className="p-12">
+        <h1 className="text-4xl font-bold italic text-center my-5 text-green-600  ">
+          Product Offers
+        </h1>
+        <div className="pt-12">
+          <Swiper
+            navigation={true}
+            pagination={true}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            speed={2000}
+            loop={true}
+            modules={[Navigation, Pagination, Autoplay]}
+            slidesPerView={3}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRA0_c4qiaq_l5K1M3dRVSX11cPtEOtFItWA&s"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjN75Yp-tsy7f3A9C0XIwS8fIkRe_PgzQMyg&s"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIrbinOldPCaoFrVtPiCm-btvi4ZqvG4U8HA&s"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlD1dcE5geFrZEoziyaLbN_tbvlb_QPmXpyg&s"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUs-Ae8WOix_w7ABGTrlAaFaL9PGARKXbhAQ&s"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqJ5foUVi76SIkszzmZJANbXdxoBvJ3aoO2Q&s"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://www.intex.in/cdn/shop/files/LED-SHF3263.jpg?v=1750331049"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://thomsonhome.in//wp-content/uploads/2025/03/43505565771000x1000-500x500.webp"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[400px]">
+                <p className="text-center text-bold italic text-xl text-green-700">
+                  Price:
+                  <span className="text-red-400 line-through"> 45354 </span>
+                  <span className="text-green-500"> 25455 </span>
+                  <span className="text-yellow-600"> 30%-off </span>
+                </p>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
+                  alt=""
+                  className="w-full h-[300px] "
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );
