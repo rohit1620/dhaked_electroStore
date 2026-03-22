@@ -27,7 +27,7 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="h-screen pt-20 bg-blue-500 ">
+      <div className="h-screen pt-20 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
         <form
           action=""
           className=" w-max p-5 m-auto shadow-form bg-gray-300 rounded-2xl"

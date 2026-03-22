@@ -14,7 +14,7 @@ const product = () => {
   }, []);
   return (
     <div className="flex">
-      <div className=" w-64 h-screen fixed left-0 top-15 z-50 bg-pink-200 shadow-sidebar flex flex-col gap-y-1 m-auto pl-20 pt-4">
+      <div className=" hidden md:block w-64 h-screen fixed left-0 top-15 z-50 bg-pink-200 shadow-sidebar flex flex-col gap-y-1 m-auto pl-20 pt-4 ">
         <h1 className="text-2xl text-blue-600 mb-2 italic font-bold">
           category
         </h1>
@@ -37,10 +37,10 @@ const product = () => {
         </div>
       </div>
 
-      <div className="  mx-64 px-10 grid grid-cols-3 gap-5 pt-7 bg-pink-200">
+      <div className="  md:mx-64 px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-7 bg-pink-200">
         {data && data.map((el, index) => <ProductItem item={el} key={index} />)}
       </div>
-      <div className="bg-pink-200 w-64 h-screen fixed right-0 top-15">
+      <div className="bg-pink-200 w-64 h-screen fixed right-0 top-15 hidden md:block">
         <img
           src="https://img.freepik.com/free-vector/electronic-sale-poster_1302-5850.jpg"
           alt=""

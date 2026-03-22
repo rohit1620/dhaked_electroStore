@@ -26,7 +26,7 @@ const Singup = () => {
     });
   };
   return (
-    <div className="h-screen pt-20 bg-amber-600">
+    <div className="h-screen pt-20 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
       <form
         action=""
         className="w-max py-8 px-7    m-auto rounded-xl bg-gray-300 shadow-form"
