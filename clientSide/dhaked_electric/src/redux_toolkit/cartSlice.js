@@ -5,6 +5,7 @@ import api from "../api/axios"
 export const cartData=createAsyncThunk("cart",async()=>{
     let data=await api.get(`/cart/${userId}`)
     data=data?.data[0]?.items
+ 
     return data;
 })
 
@@ -22,7 +23,7 @@ const cartSlice=createSlice({
                 state.status="loading"
             }).addCase(cartData.fulfilled,(state,action)=>{
                 state.status="success",
-                state.item=action.payload.data
+                state.item=action.payload
             }).addCase(cartData.rejected,(state,action)=>{
                 state.status="rejected",
                 state.item=action.payload.error
