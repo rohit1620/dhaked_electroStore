@@ -6,12 +6,36 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 let datas = data.electronics;
 
 console.log(datas.length);
 
 const Home = () => {
+  useGSAP(() => {
+    gsap.from(".about h2", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+    });
+    gsap.from(".about p", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: 2,
+    });
+    gsap.from(".about img", {
+      rotate: 360,
+      duration: 2,
+      clipPath:
+        "polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)",
+      opacity: 0,
+      delay: 2,
+    });
+  }, []);
   // ######## Custom slide make
   // const data_length = datas.length;
   // const [index, setIndex] = useState(0);
@@ -156,7 +180,7 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
       {/* about store section */}
-      <div className="md:flex px-8  py-16">
+      <div className="md:flex px-8  py-16 about">
         <div className="md:w-1/2 pt-5">
           <h2 className="font-bold text-3xl text-center mb-2 italic">
             About Our Store
@@ -185,7 +209,7 @@ const Home = () => {
           <img
             src="https://3.imimg.com/data3/TB/KQ/MY-238885/videocon-ha-500x500.jpg"
             alt=""
-            className="w-full h-[400px]"
+            className="w-full h-[400px] rohit"
           />
         </div>
       </div>
