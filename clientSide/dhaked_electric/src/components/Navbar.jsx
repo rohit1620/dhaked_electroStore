@@ -14,7 +14,9 @@ const Navbar = () => {
     <>
       <div className="fixed w-full top-0 z-50 bg-black text-white flex h-15 justify-around items-center ">
         <div>
-          <h1 className="italic">Dhaked-Electric</h1>
+          <div className={`text-xl italic font-bold text-blue-600`}>
+            <span className="text-yellow-500">𝓓</span>𝓛i𝓖𝓗𝓣
+          </div>
         </div>
 
         <div className="flex items-center gap-10">

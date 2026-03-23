@@ -8,6 +8,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 let datas = data.electronics;
 
@@ -15,25 +18,59 @@ console.log(datas.length);
 
 const Home = () => {
   useGSAP(() => {
-    gsap.from(".about h2", {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 70%",
+        end: "top 40%",
+        // scrub: 1,
+        markers: true,
+      },
+    });
+    const t2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".service",
+        start: "top 70%",
+        end: "top 40%",
+        // scrub: 1,
+        markers: true,
+      },
+    });
+    tl.from(".about h2", {
       y: 50,
       opacity: 0,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".about p", {
+      duration: 0.5,
+    })
+      .from(
+        ".about p",
+        {
+          y: 50,
+          opacity: 0,
+          duration: 1,
+        },
+        "rohit",
+      )
+      .from(
+        ".about img",
+        {
+          rotate: 360,
+          duration: 1,
+          clipPath:
+            "polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)",
+          opacity: 0,
+        },
+        "rohit",
+      );
+
+    t2.from(".service>h1", {
       y: 50,
       opacity: 0,
-      duration: 1,
-      delay: 2,
-    });
-    gsap.from(".about img", {
-      rotate: 360,
-      duration: 2,
-      clipPath:
-        "polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)",
+      duration: 0.5,
+    }).from(".service>div>div", {
+      y: 50,
       opacity: 0,
-      delay: 2,
+      stagger: 0.3,
+      duration: 1,
     });
   }, []);
   // ######## Custom slide make
@@ -180,9 +217,9 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
       {/* about store section */}
-      <div className="md:flex px-8  py-16 about">
+      <div className="md:flex px-8  py-20 about">
         <div className="md:w-1/2 pt-5">
-          <h2 className="font-bold text-3xl text-center mb-2 italic">
+          <h2 className="font-bold text-3xl text-center mb-3 italic">
             About Our Store
           </h2>
           <p className="text-justify italic pb-4 sm:pb-0">
@@ -215,9 +252,9 @@ const Home = () => {
       </div>
       {/* our services section  */}
       {/* className="bg-pink-100" */}
-      <div className="bg-pink-100 py-12 ">
-        <div className="w-[80%] m-auto ">
-          <h1 className="text-4xl font-bold italic text-center mb-10  ">
+      <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 pb-12 pt-10">
+        <div className="w-[80%] m-auto service">
+          <h1 className="text-4xl font-bold italic text-center mb-10   ">
             Our Services
           </h1>
           {/* grid  grid-cols-[repeat(1,1fr)] lg:grid-cols-[repeat(4,1fr)] sm:grid-cols-[repeat(2,1fr)] gap-x-5 gap-y-6 sm:gap-y-0 */}
@@ -267,20 +304,19 @@ const Home = () => {
       </div>
 
       <div className="p-12">
-        <h1 className="text-4xl font-bold italic text-center my-5 text-green-600  ">
+        <h1 className="text-4xl font-bold italic text-center pb-7 pt-3 text-green-600  ">
           Product Offers
         </h1>
         <div className="pt-12">
           <Swiper
             navigation={true}
-            pagination={true}
             autoplay={{
               delay: 1000,
               disableOnInteraction: false,
             }}
             speed={2000}
             loop={true}
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Navigation, Autoplay]}
             slidesPerView={3}
             breakpoints={{
               0: {

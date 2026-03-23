@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import api from "../api/axios";
 import { useNavigate } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -25,12 +27,19 @@ const Login = () => {
     console.log(data);
     setFormData({ email: "", password: "" });
   };
+  useGSAP(() => {
+    gsap.from(".rform", {
+      y: 50,
+      opacity: 0,
+      duration: 2,
+    });
+  }, []);
   return (
     <div>
       <div className="h-screen pt-20 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
         <form
           action=""
-          className=" w-max p-5 m-auto shadow-form bg-gray-300 rounded-2xl"
+          className=" w-max p-5 m-auto shadow-form bg-gray-300 rounded-2xl rform"
           onSubmit={handleSubmit}
         >
           <h3 className="text-xl text-green-700 italic mb-4 font-bold">

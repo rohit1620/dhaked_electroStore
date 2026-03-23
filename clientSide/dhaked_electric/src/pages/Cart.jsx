@@ -11,8 +11,10 @@ const Cart = () => {
     dispatch(cartData());
   }, []);
   return (
-    <div className=" w-[80%] md:w-[60%] m-auto mt-10">
-      {data && data.map((el) => <CartItem item={el} key={el._id} />)}
+    <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+      <div className=" w-[90%] md:w-[60%] m-auto pt-10 ">
+        {data && data.map((el) => <CartItem item={el} key={el._id} />)}
+      </div>
     </div>
   );
 };
