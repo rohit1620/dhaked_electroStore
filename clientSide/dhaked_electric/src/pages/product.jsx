@@ -22,9 +22,10 @@ const product = () => {
       duration: 1,
     });
   }, []);
+
   return (
     <div className="flex">
-      <div className=" hidden md:block w-64 h-screen fixed left-0 top-15 z-50 bg-pink-400 shadow-sidebar flex flex-col gap-y-1 m-auto pl-20 pt-4 ">
+      <div className=" hidden lg:block w-64 h-screen fixed left-0 top-15 z-50 bg-pink-400 shadow-sidebar flex flex-col gap-y-1 m-auto pl-20 pt-4 ">
         <h1 className="text-2xl text-blue-600 mb-2 italic font-bold">
           category
         </h1>
@@ -47,10 +48,10 @@ const product = () => {
         </div>
       </div>
 
-      <div className="  md:mx-64 px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-7 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 pb-10 product">
+      <div className=" w-full lg:mx-64 px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-7 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 pb-10 product">
         {data && data.map((el, index) => <ProductItem item={el} key={index} />)}
       </div>
-      <div className="bg-pink-200 w-64 h-screen fixed right-0 top-15 hidden md:block">
+      <div className="bg-pink-200 w-64  h-screen fixed right-0 top-15 hidden lg:block">
         <img
           src="https://img.freepik.com/free-vector/electronic-sale-poster_1302-5850.jpg"
           alt=""

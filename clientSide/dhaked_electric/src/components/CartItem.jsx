@@ -1,16 +1,22 @@
 import React, { useEffect } from "react";
+import api from "../api/axios";
+import { useDispatch } from "react-redux";
+import { cartData } from "../redux_toolkit/cartSlice";
 
 const CartItem = ({ item }) => {
-  const { category, name, image, price } = item?.productId;
+  const dispatch = useDispatch();
+  const { category, name, image, price, _id } = item?.productId;
   console.log("item", item.productId);
-  useGSAP(() => {
-    gsap.from(".product>div", {
-      y: 50,
-      stagger: 0.3,
-      opacity: 0,
-      duration: 1,
-    });
-  }, []);
+
+  const productId = _id;
+  const userId = "69b0f75d329c4587a89239d1";
+
+  const removeItem = async () => {
+    let data = await api.post("/cart/delete", { userId, productId });
+    console.log("remove item", data);
+    dispatch(cartData());
+  };
+
   return (
     <div className=" h-25 lg:h-30 flex justify-between shadow-cart mb-5 bg-gray-100 rounded-lg lg:rounded-2xl ">
       <div className="flex gap-x-3 lg:gap-x-10">
@@ -33,12 +39,15 @@ const CartItem = ({ item }) => {
         <button className="shadow-cart bg-gray-300 text-green-600 lg:text-2xl px-2 lg:px-6 lg:rounded-lg">
           +
         </button>
-        <span className=" mx-1 lg:mx-3">1</span>
+        <span className=" mx-1 lg:mx-3">{item.quantity}</span>
         <button className="shadow-cart bg-gray-300 text-red-600 lg:text-2xl px-2 lg:px-6 lg:rounded-lg">
           -
         </button>
         <div>
-          <button className="bg-orange-500 text-gray-300 lg:px-4 md:py-1 italic font-bold md:rounded-2xl mt-4 md:mt-5">
+          <button
+            onClick={removeItem}
+            className="bg-orange-500 text-gray-300 lg:px-4 md:py-1 italic font-bold md:rounded-2xl mt-4 md:mt-5 cursor-pointer"
+          >
             Remove <span className="hidden md:inline">Item</span>
           </button>
         </div>

@@ -45,8 +45,9 @@ const Navbar = () => {
         </div>
         <div className="flex gap-6">
           <Link to="/cart">
-            <h3>
+            <h3 onClick={() => setOpen(false)}>
               <FontAwesomeIcon icon={faCartArrowDown} />
+              <sup className="text-yellow-400 text-xl font-bold">4</sup>
             </h3>
           </Link>
           <Link to="/profile">
