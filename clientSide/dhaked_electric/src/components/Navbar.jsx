@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { cartData } from "../redux_toolkit/cartSlice";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -9,6 +12,12 @@ import {
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.cart.item);
+  console.log("navbar", data.length);
+  useEffect(() => {
+    dispatch(cartData());
+  }, [data]);
 
   return (
     <>
@@ -47,7 +56,9 @@ const Navbar = () => {
           <Link to="/cart">
             <h3 onClick={() => setOpen(false)}>
               <FontAwesomeIcon icon={faCartArrowDown} />
-              <sup className="text-yellow-400 text-xl font-bold">4</sup>
+              <sup className="text-yellow-400 text-xl font-bold">
+                {data.length}
+              </sup>
             </h3>
           </Link>
           <Link to="/profile">

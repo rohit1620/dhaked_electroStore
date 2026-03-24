@@ -29,22 +29,36 @@ const product = () => {
         <h1 className="text-2xl text-blue-600 mb-2 italic font-bold">
           category
         </h1>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mb-1">
           <input type="checkbox" name="" id="" />
 
           <label htmlFor="">Tv</label>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mb-1">
           <input type="checkbox" name="" id="" />
           <label htmlFor="">Frize</label>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mb-1">
           <input type="checkbox" name="" id="" />
           <label htmlFor="">Coolar</label>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mb-1">
           <input type="checkbox" name="" id="" />
-          <label htmlFor="">whashing</label>
+          <label htmlFor="">watch</label>
+        </div>
+        <div className="flex items-center gap-2 mb-1">
+          <input type="checkbox" name="" id="" />
+          <label htmlFor="">Laptop</label>
+        </div>
+        <div className="flex items-center gap-2 mb-1">
+          <input type="checkbox" name="" id="" />
+          <label htmlFor="">Mobile</label>
+        </div>{" "}
+        <div className="flex items-center gap-2 mb-1">
+          <input type="checkbox" name="" id="" />
+          <label htmlFor="" className="">
+            Speaker
+          </label>
         </div>
       </div>
 
