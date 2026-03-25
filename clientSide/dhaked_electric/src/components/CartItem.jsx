@@ -1,22 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import api from "../api/axios";
 import { useDispatch } from "react-redux";
 import { cartData } from "../redux_toolkit/cartSlice";
 
 const CartItem = ({ item }) => {
+  const [qt, setQt] = useState(item.quantity);
   const dispatch = useDispatch();
   const { category, name, image, price, _id } = item?.productId;
   console.log("item", item.productId);
 
   const productId = _id;
-  const userId = "69b0f75d329c4587a89239d1";
-  // let userId = localStorage.getItem("userid");
+  // const userId = "69b0f75d329c4587a89239d1";
+  let userId = localStorage.getItem("userid");
 
   const removeItem = async () => {
     let data = await api.post("/cart/delete", { userId, productId });
     console.log("remove item", data);
     dispatch(cartData());
   };
+
+  const updateQt = async () => {
+    const data = await api.post("/cart/update", {
+      userId,
+      productId,
+      quantity: qt,
+    });
+    console.log("update item", data);
+    dispatch(cartData());
+  };
+
+  useEffect(() => {
+    updateQt();
+  }, [qt]);
 
   return (
     <div className=" h-25 lg:h-30 flex justify-between shadow-cart mb-5 bg-gray-100 rounded-lg lg:rounded-2xl ">
@@ -36,12 +51,18 @@ const CartItem = ({ item }) => {
           </h4>
         </div>
       </div>
-      <div className="mr-2 lg:mr-10 mt-2 lg:mt-5">
-        <button className="shadow-cart bg-gray-300 text-green-600 lg:text-2xl px-2 lg:px-6 lg:rounded-lg">
+      <div className="mr-2 lg:mr-10 mt-2 lg:mt-5 ">
+        <button
+          onClick={() => setQt(qt + 1)}
+          className="shadow-cart bg-gray-300 text-green-600 lg:text-2xl px-2 lg:px-6 lg:rounded-lg cursor-pointer"
+        >
           +
         </button>
         <span className=" mx-1 lg:mx-3">{item.quantity}</span>
-        <button className="shadow-cart bg-gray-300 text-red-600 lg:text-2xl px-2 lg:px-6 lg:rounded-lg">
+        <button
+          onClick={() => setQt(qt - 1)}
+          className="shadow-cart bg-gray-300 text-red-600 lg:text-2xl px-2 lg:px-6 lg:rounded-lg cursor-pointer"
+        >
           -
         </button>
         <div>

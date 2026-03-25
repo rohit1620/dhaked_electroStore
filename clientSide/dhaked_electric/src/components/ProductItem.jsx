@@ -10,8 +10,8 @@ const ProductItem = ({ item }) => {
   const dispatch = useDispatch();
   const { image, name, price, category, _id } = item;
   console.log("item", item);
-  let userId = "69b0f75d329c4587a89239d1";
-  // let userId = localStorage.getItem("userid");
+  // let userId = "69b0f75d329c4587a89239d1";
+  let userId = localStorage.getItem("userid");
   let productId = _id;
   const addToCart = async () => {
     const data = await api.post("/cart/add", { userId, productId });

@@ -14,7 +14,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const data = useSelector((state) => state.cart.item);
-  console.log("navbar", data.length);
+  // console.log("navbar", data.length);
   useEffect(() => {
     dispatch(cartData());
   }, []);
@@ -57,7 +57,7 @@ const Navbar = () => {
             <h3 onClick={() => setOpen(false)}>
               <FontAwesomeIcon icon={faCartArrowDown} />
               <sup className="text-yellow-400 text-xl font-bold">
-                {data.length}
+                {data?.length || 0}
               </sup>
             </h3>
           </Link>

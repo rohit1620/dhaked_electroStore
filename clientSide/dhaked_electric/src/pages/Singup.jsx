@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import api from "../api/axios";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useNavigate } from "react-router-dom";
 
 const Singup = () => {
+  const [error, setError] = useState(false);
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
     phone: "",
   });
+
+  const navigate = useNavigate();
 
   const handleForm = (e) => {
     const { name, value } = e.target;
@@ -18,15 +22,23 @@ const Singup = () => {
   };
   const submitForm = async (e) => {
     e.preventDefault();
-    const data = await api.post("/auth/register", formData);
-    console.log(data?.data);
-    alert(data?.data?.msg);
-    setFormData({
-      username: "",
-      email: "",
-      password: "",
-      phone: "",
-    });
+    try {
+      const data = await api.post("/auth/register", formData);
+
+      console.log(data?.data);
+      alert(data?.data?.msg);
+      setFormData({
+        username: "",
+        email: "",
+        password: "",
+        phone: "",
+      });
+      navigate("/login");
+    } catch (error) {
+      if (error.response.data.msg == "user already exist") {
+        setError(true);
+      }
+    }
   };
   useGSAP(() => {
     gsap.from(".rform", {
@@ -56,6 +68,7 @@ const Singup = () => {
         />{" "}
         <br />
         <br />
+        {error && <p className="text-red-700">Email Alreay Exist</p>}
         <input
           type="text"
           name="email"
