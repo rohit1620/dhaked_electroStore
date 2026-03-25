@@ -17,7 +17,7 @@ const Navbar = () => {
   console.log("navbar", data.length);
   useEffect(() => {
     dispatch(cartData());
-  }, [data]);
+  }, []);
 
   return (
     <>

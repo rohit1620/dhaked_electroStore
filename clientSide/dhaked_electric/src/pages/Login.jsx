@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const Login = () => {
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -16,16 +17,26 @@ const Login = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await api.post("/auth/login", formData);
-    if (data?.data?.msg == "Login successfully") {
-      alert(data?.data?.msg);
-      navigate("/product");
-    } else {
-      alert("Failled Login");
-    }
+    try {
+      const data = await api.post("/auth/login", formData);
+      if (data?.data?.msg == "Login successfully") {
+        console.log("userid", data.data.id);
+        alert(data?.data?.msg);
+        let di = data.data.id;
+        let kan = data.data.token;
+        localStorage.setItem("userid", di);
+        localStorage.setItem("token", kan);
 
-    console.log(data);
-    setFormData({ email: "", password: "" });
+        setError(false);
+        setFormData({ email: "", password: "" });
+        navigate("/product");
+      }
+    } catch (error) {
+      if (error?.response?.data?.msg == "Invailid credentials") {
+        setError(true);
+        // alert(error?.response?.data?.msg);
+      }
+    }
   };
   useGSAP(() => {
     gsap.from(".rform", {
@@ -45,6 +56,7 @@ const Login = () => {
           <h3 className="text-xl text-green-700 italic mb-4 font-bold">
             Login Form
           </h3>
+          {error && <p className="text-red-700">Invailid Crediantial</p>}
           <input
             type="text"
             name="email"
@@ -71,7 +83,7 @@ const Login = () => {
             type="submit"
             name=""
             id="submit"
-            className="italic text-white bg-gray-900 py-1 px-5 rounded-lg ml-[25%]"
+            className="italic text-white bg-gray-900 py-1 px-5 rounded-lg ml-[25%] cursor-pointer"
           />
         </form>
       </div>

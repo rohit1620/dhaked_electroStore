@@ -10,6 +10,7 @@ const CartItem = ({ item }) => {
 
   const productId = _id;
   const userId = "69b0f75d329c4587a89239d1";
+  // let userId = localStorage.getItem("userid");
 
   const removeItem = async () => {
     let data = await api.post("/cart/delete", { userId, productId });

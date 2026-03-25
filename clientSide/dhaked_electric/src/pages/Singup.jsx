@@ -93,7 +93,7 @@ const Singup = () => {
           type="submit"
           name=""
           id=""
-          className="border px-3 p-1 bg-gray-900 text-white rounded-md italic ml-[25%]"
+          className="border px-3 p-1 bg-gray-900 text-white rounded-md italic ml-[25%] cursor-pointer"
         />
       </form>
     </div>

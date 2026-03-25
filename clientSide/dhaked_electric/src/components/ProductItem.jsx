@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { cartData } from "../redux_toolkit/cartSlice";
+import { fetchData } from "../redux_toolkit/productSlice";
+
 import api from "../api/axios";
 
 const ProductItem = ({ item }) => {
   const [cart, setCart] = useState([]);
+  const dispatch = useDispatch();
   const { image, name, price, category, _id } = item;
   console.log("item", item);
-  const userId = "69b0f75d329c4587a89239d1";
-  const productId = _id;
+  let userId = "69b0f75d329c4587a89239d1";
+  // let userId = localStorage.getItem("userid");
+  let productId = _id;
   const addToCart = async () => {
     const data = await api.post("/cart/add", { userId, productId });
+    dispatch(cartData());
+    getCartItem();
+    // dispatch(fetchData());
     console.log("cart-item", data);
   };
 
@@ -18,7 +27,14 @@ const ProductItem = ({ item }) => {
     value = value?.data[0]?.items;
     setCart(value);
   };
-  getCartItem();
+  useEffect(() => {
+    getCartItem();
+  }, []);
+
+  // useEffect(() => {
+  //   dispatch(fetchData());
+  // }, [cart]);
+
   return (
     <div className="shadow-cart h-70 text-center rounded-2xl bg-gray-100">
       <img src={image} alt="" className="w-full h-40 rounded-t-2xl" />
