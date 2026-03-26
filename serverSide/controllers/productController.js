@@ -3,12 +3,13 @@ const Product= require("../models/productSchema")
 const getProduct=async(req,res)=>{
     try {
         const {search,category}=req.query;
-        const filter={};
+        let filter={};
         if(search){
             filter.name={$regex:search, $options:'i'}
         }
         if(category){
-            filter.category=category
+            const categoryList=Array.isArray(category)?category:[category]
+          filter.category = { $in: categoryList };
         }
 
         const product=await Product.find(filter).sort({createdAt:-1});

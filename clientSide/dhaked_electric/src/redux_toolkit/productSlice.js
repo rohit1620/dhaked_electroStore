@@ -1,8 +1,9 @@
 import {createSlice,createAsyncThunk} from '@reduxjs/toolkit';
 import api from '../api/axios'
 
-export const fetchData=createAsyncThunk("product",async()=>{
-       let data=await api.get("/product")
+export const fetchData=createAsyncThunk("product",async(queryString)=>{
+    const finalUrl = queryString ? `/product?${queryString}` : '/product';
+       let data=await api.get(finalUrl)
        console.log("data",data.data)
        return data.data;
 })

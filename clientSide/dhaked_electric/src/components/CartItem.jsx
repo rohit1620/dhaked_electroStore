@@ -6,6 +6,7 @@ import { cartData } from "../redux_toolkit/cartSlice";
 const CartItem = ({ item }) => {
   const [qt, setQt] = useState(item.quantity);
   const dispatch = useDispatch();
+  // const data = useSelector((state) => state.cart.item);
   const { category, name, image, price, _id } = item?.productId;
   console.log("item", item.productId);
 
@@ -31,6 +32,7 @@ const CartItem = ({ item }) => {
 
   useEffect(() => {
     updateQt();
+    // dispatch(cartData());
   }, [qt]);
 
   return (
@@ -58,7 +60,7 @@ const CartItem = ({ item }) => {
         >
           +
         </button>
-        <span className=" mx-1 lg:mx-3">{item.quantity}</span>
+        <span className=" mx-1 lg:mx-3">{qt}</span>
         <button
           onClick={() => setQt(qt - 1)}
           className="shadow-cart bg-gray-300 text-red-600 lg:text-2xl px-2 lg:px-6 lg:rounded-lg cursor-pointer"

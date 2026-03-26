@@ -8,12 +8,47 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const product = () => {
+  const [selectedCategory, setSelectedCategory] = useState([]);
   const dispatch = useDispatch();
   const data = useSelector((state) => state.product.item);
   console.log("product data", data);
+
   useEffect(() => {
     dispatch(fetchData());
   }, []);
+
+  useEffect(() => {
+    const getData = async () => {
+      let param = new URLSearchParams();
+      // selectedCategory.forEach((el) => param.append("category", el));
+      // Check karein ki array khali na ho
+      if (selectedCategory.length > 0) {
+        selectedCategory.forEach((el) => param.append("category", el));
+      }
+
+      const queryString = param.toString(); // "category=watch" jaisa banega
+      console.log("Query String:", queryString);
+
+      // String bhejein, object nahi
+      dispatch(fetchData(queryString));
+    };
+    getData();
+  }, [selectedCategory]);
+  const handleChange = async (e) => {
+    let value = e.target.value;
+
+    // Pehla letter Capital baaki small
+    // const value =
+    //   rawValue.charAt(0).toUpperCase() + rawValue.slice(1).toLowerCase();
+    const isChecked = e.target.checked;
+
+    if (isChecked) {
+      setSelectedCategory([...selectedCategory, value]);
+    } else {
+      setSelectedCategory(selectedCategory.filter((item) => item != value));
+    }
+  };
+
   useGSAP(() => {
     gsap.from(".product>div", {
       y: 50,
@@ -30,32 +65,88 @@ const product = () => {
           category
         </h1>
         <div className="flex items-center gap-2 mb-1">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            name=""
+            value="Tv"
+            id=""
+            onChange={handleChange}
+            checked={selectedCategory.includes("Tv")}
+            className="cursor-pointer"
+          />
 
           <label htmlFor="">Tv</label>
         </div>
         <div className="flex items-center gap-2 mb-1">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            value="Frize"
+            onChange={handleChange}
+            checked={selectedCategory.includes("Frize")}
+            className="cursor-pointer"
+          />
           <label htmlFor="">Frize</label>
         </div>
         <div className="flex items-center gap-2 mb-1">
-          <input type="checkbox" name="" id="" />
-          <label htmlFor="">Coolar</label>
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            value="Cooler"
+            onChange={handleChange}
+            checked={selectedCategory.includes("Cooler")}
+            className="cursor-pointer"
+          />
+          <label htmlFor="">Cooler</label>
         </div>
         <div className="flex items-center gap-2 mb-1">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            value="Watch"
+            onChange={handleChange}
+            checked={selectedCategory.includes("Watch")}
+            className="cursor-pointer"
+          />
           <label htmlFor="">watch</label>
         </div>
         <div className="flex items-center gap-2 mb-1">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            value="Laptop"
+            onChange={handleChange}
+            checked={selectedCategory.includes("Laptop")}
+            className="cursor-pointer"
+          />
           <label htmlFor="">Laptop</label>
         </div>
         <div className="flex items-center gap-2 mb-1">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            value="Mobile"
+            onChange={handleChange}
+            checked={selectedCategory.includes("Mobile")}
+            className="cursor-pointer"
+          />
           <label htmlFor="">Mobile</label>
         </div>{" "}
         <div className="flex items-center gap-2 mb-1">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            value="Speaker"
+            onChange={handleChange}
+            checked={selectedCategory.includes("Speaker")}
+            className="cursor-pointer"
+          />
           <label htmlFor="" className="">
             Speaker
           </label>
