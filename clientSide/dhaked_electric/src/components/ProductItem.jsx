@@ -14,6 +14,9 @@ const ProductItem = ({ item }) => {
   let userId = localStorage.getItem("userid");
   let productId = _id;
   const addToCart = async () => {
+    if (!userId) {
+      alert("Please Singup and Login First");
+    }
     const data = await api.post("/cart/add", { userId, productId });
     dispatch(cartData());
     getCartItem();

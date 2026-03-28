@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { cartData } from "../redux_toolkit/cartSlice";
 
@@ -15,6 +16,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.cart.item);
   let userId = localStorage.getItem("userid");
+  const navigate = useNavigate();
   // console.log("navbar", data.length);
   useEffect(() => {
     dispatch(cartData());
@@ -75,7 +77,12 @@ const Navbar = () => {
                 LogOut
               </button>
             ) : (
-              <button className="font-bold text-blue-600 italic cursor-pointer">
+              <button
+                className="font-bold text-blue-600 italic cursor-pointer"
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
                 LogIn
               </button>
             )}

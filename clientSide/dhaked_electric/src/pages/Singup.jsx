@@ -70,7 +70,7 @@ const Singup = () => {
         <br />
         {error && <p className="text-red-700">Email Alreay Exist</p>}
         <input
-          type="text"
+          type="email"
           name="email"
           id="email"
           placeholder="Enter Email"

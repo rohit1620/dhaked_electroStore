@@ -30,8 +30,8 @@ const Login = () => {
 
         setError(false);
         setFormData({ email: "", password: "" });
-        window.location.reload();
         navigate("/product");
+        window.location.reload();
       }
     } catch (error) {
       if (error?.response?.data?.msg == "Invailid credentials") {
@@ -60,7 +60,7 @@ const Login = () => {
           </h3>
           {error && <p className="text-red-700">Invailid Crediantial</p>}
           <input
-            type="text"
+            type="email"
             name="email"
             id="email"
             placeholder="Enter Email"
