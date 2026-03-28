@@ -24,7 +24,7 @@ const Home = () => {
         start: "top 70%",
         end: "top 40%",
         // scrub: 1,
-        markers: true,
+        // markers: true,
       },
     });
     const t2 = gsap.timeline({
@@ -33,7 +33,7 @@ const Home = () => {
         start: "top 70%",
         end: "top 40%",
         // scrub: 1,
-        markers: true,
+        // markers: true,
       },
     });
     tl.from(".about h2", {

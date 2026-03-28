@@ -14,6 +14,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const data = useSelector((state) => state.cart.item);
+  let userId = localStorage.getItem("userid");
   // console.log("navbar", data.length);
   useEffect(() => {
     dispatch(cartData());
@@ -61,9 +62,24 @@ const Navbar = () => {
               </sup>
             </h3>
           </Link>
-          <Link to="/profile">
-            <h2>profile</h2>
-          </Link>
+          <div>
+            {userId ? (
+              <button
+                className="font-bold text-red-600 italic cursor-pointer"
+                onClick={() => {
+                  localStorage.removeItem("userid");
+                  window.location.reload();
+                  alert("LogOut Successfully");
+                }}
+              >
+                LogOut
+              </button>
+            ) : (
+              <button className="font-bold text-blue-600 italic cursor-pointer">
+                LogIn
+              </button>
+            )}
+          </div>
         </div>
         <h3 className="md:hidden" onClick={() => setOpen(!open)}>
           {open ? (

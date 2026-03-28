@@ -11,6 +11,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+
   const handleForm = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -29,6 +30,7 @@ const Login = () => {
 
         setError(false);
         setFormData({ email: "", password: "" });
+        window.location.reload();
         navigate("/product");
       }
     } catch (error) {
