@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables (Hide from GitHub)
+.env
+.env.local
+.env.production
+
+# Build output
+dist/
+build/
