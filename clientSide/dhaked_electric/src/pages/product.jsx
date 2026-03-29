@@ -6,7 +6,7 @@ import productItem from "../components/ProductItem";
 import ProductItem from "../components/ProductItem";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Loading from "../components/loading";
+import Loading from "../components/Loading";
 
 const product = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
