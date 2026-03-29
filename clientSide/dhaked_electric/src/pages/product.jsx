@@ -118,7 +118,7 @@ const product = () => {
         <label htmlFor="" className="pr-4 pl-1">
           watch
         </label>
-        <input
+        {/* <input
           type="checkbox"
           name=""
           id=""
@@ -129,7 +129,7 @@ const product = () => {
         />
         <label htmlFor="" className="pr-4 pl-1">
           Laptop
-        </label>
+        </label> */}
       </div>
       <div className="flex">
         <div className=" hidden lg:block w-64 h-screen fixed left-0 top-15 z-50 bg-pink-400 shadow-sidebar flex flex-col gap-y-1 m-auto pl-20 pt-4 ">
