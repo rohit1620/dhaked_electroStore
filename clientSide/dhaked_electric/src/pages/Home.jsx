@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -260,44 +261,54 @@ const Home = () => {
           {/* grid  grid-cols-[repeat(1,1fr)] lg:grid-cols-[repeat(4,1fr)] sm:grid-cols-[repeat(2,1fr)] gap-x-5 gap-y-6 sm:gap-y-0 */}
           <div className="md:flex gap-5  ">
             <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
-              <img
-                src="https://png.pngtree.com/background/20230808/original/pngtree-digital-devices-for-productivity-laptop-mobile-phone-and-tablet-pc-photo-picture-image_4512002.jpg"
-                alt=""
-                className="w-full h-[350px] rounded-t-2xl"
-              />
-              <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2">
-                Laptop & Mobiles
-              </h3>
+              <Link to="/product">
+                <img
+                  src="https://png.pngtree.com/background/20230808/original/pngtree-digital-devices-for-productivity-laptop-mobile-phone-and-tablet-pc-photo-picture-image_4512002.jpg"
+                  alt=""
+                  className="w-full h-[350px] rounded-t-2xl"
+                />
+
+                <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2 pb-3 lg:pb-0">
+                  Laptop & Mobiles
+                </h3>
+              </Link>
+            </div>
+
+            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
+              <Link to="/product">
+                <img
+                  src="https://images.hindustantimes.com/tech/img/2024/03/23/1600x900/sgddxgfhhc_1711231456166_1711231463102.jpg"
+                  alt=""
+                  className="w-full h-[350px] rounded-t-2xl"
+                />
+                <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2 pb-3 lg:pb-0">
+                  Cooler & Fan
+                </h3>
+              </Link>
             </div>
             <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
-              <img
-                src="https://images.hindustantimes.com/tech/img/2024/03/23/1600x900/sgddxgfhhc_1711231456166_1711231463102.jpg"
-                alt=""
-                className="w-full h-[350px] rounded-t-2xl"
-              />
-              <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2">
-                Laptop & Mobiles
-              </h3>
+              <Link to="/product">
+                <img
+                  src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
+                  alt=""
+                  className="w-full h-[350px] rounded-t-2xl"
+                />
+                <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2 pb-3 lg:pb-0">
+                  Freeze & Tv
+                </h3>
+              </Link>
             </div>
             <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
-              <img
-                src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
-                alt=""
-                className="w-full h-[350px] rounded-t-2xl"
-              />
-              <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2">
-                Laptop & Mobiles
-              </h3>
-            </div>
-            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
-                alt=""
-                className="w-full h-[350px] rounded-t-2xl"
-              />
-              <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2">
-                Laptop & Mobiles
-              </h3>
+              <Link to="/product">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
+                  alt=""
+                  className="w-full h-[350px] rounded-t-2xl"
+                />
+                <h3 className="text-center text-xl font-bold italic text-pink-600 mb-4 mt-2 pb-3 lg:pb-0">
+                  Mixer & other
+                </h3>
+              </Link>
             </div>
           </div>
         </div>

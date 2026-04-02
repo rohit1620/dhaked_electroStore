@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { cartData } from "../redux_toolkit/cartSlice";
 import { fetchData } from "../redux_toolkit/productSlice";
+import { useNavigate } from "react-router-dom";
 
 import api from "../api/axios";
 
 const ProductItem = ({ item }) => {
   const [cart, setCart] = useState([]);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { image, name, price, category, _id } = item;
   console.log("item", item);
   // let userId = "69b0f75d329c4587a89239d1";
@@ -16,6 +18,7 @@ const ProductItem = ({ item }) => {
   const addToCart = async () => {
     if (!userId) {
       alert("Please Singup and Login First");
+      navigate("/singup");
     }
     const data = await api.post("/cart/add", { userId, productId });
     dispatch(cartData());
