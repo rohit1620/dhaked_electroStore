@@ -238,76 +238,76 @@ const Home = () => {
             <img
               src="https://i.pinimg.com/736x/d7/cd/14/d7cd14b1244b7c86898b9ba6b1283704.jpg"
               alt="image not found"
-              className="w-full h-[70vh] "
+              className="w-full h-[65vh] "
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src="https://st3.depositphotos.com/4475215/16107/i/1600/depositphotos_161072886-stock-photo-home-appliances-group-of-white.jpg"
               alt="image not found"
-              className="w-full h-[70vh] "
+              className="w-full h-[65vh] "
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ09WYmGNUZ6olROqodIlIS51_VeQLWbm-tRw&s"
               alt="image not found"
-              className="w-full h-[70vh] "
+              className="w-full h-[65vh] "
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src="https://sansuiworld.com/cdn/shop/files/JSWG43CSFHD_RPD_1.webp?v=1753076465&width=2000"
               alt="image not found"
-              className="w-full h-[70vh] "
+              className="w-full h-[65vh] "
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src="https://st3.depositphotos.com/4475215/37469/i/1600/depositphotos_374693064-stock-photo-home-appliances-commerce-online-shopping.jpg"
               alt="image not found"
-              className="w-full h-[70vh] "
+              className="w-full h-[65vh] "
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src="https://img.freepik.com/free-vector/broken-washing-machine-realistic-indoor-composition-with-clothes-washer-water-pouring-out-door_1284-33057.jpg?semt=ais_incoming&w=740&q=80"
               alt="image not found"
-              className="w-full h-[70vh] "
+              className="w-full h-[65vh] "
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src="https://images.unsplash.com/photo-1767448747239-6b0df47b8ab0?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="image not found"
-              className="w-full h-[70vh] "
+              className="w-full h-[65vh] "
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src="https://image.made-in-china.com/2f0j00RPtBkNCIYUcL/Second-Hand-Cellphone-for-A15-Original-Used-Mobile-Phones-Unlock-Mobile-Phone-Smart-Phone.webp"
               alt="image not found"
-              className="w-full h-[70vh]"
+              className="w-full h-[65vh]"
             />
           </SwiperSlide>
 
           <SwiperSlide>
             <img
               src="https://cpimg.tistatic.com/11095022/b/4/split-ac..jpg"
-              className="w-full h-[70vh] "
+              className="w-full h-[65vh] "
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src="https://www.maytag.com/is/image/content/dam/business-unit/maytag/en-us/marketing-content/site-assets/page-content/oc-articles/types-of-refrigerators/Types-of-Refrigerators-Image4M_v2.jpg?$atomic-mobile$&fit=constrain&fmt=webp-alpha&qlt=100&bfc=off"
               alt="image not found"
-              className="w-full h-[70vh] "
+              className="w-full h-[65vh] "
             />
           </SwiperSlide>
         </Swiper>
       </div>
       {/* about store section */}
-      <div className="md:flex px-8  pb-10 md:pb-20 pt-10 about">
+      <div className="md:flex px-8  pb-10 md:pb-20 pt-7 md:pt-8 lg:pt-10 about">
         <div className="md:w-1/2 pt-5">
           <h2 className="font-bold text-3xl text-center mb-3 italic">
             About Our Store
@@ -348,8 +348,8 @@ const Home = () => {
             Our Services
           </h1>
           {/* grid  grid-cols-[repeat(1,1fr)] lg:grid-cols-[repeat(4,1fr)] sm:grid-cols-[repeat(2,1fr)] gap-x-5 gap-y-6 sm:gap-y-0 */}
-          <div className="md:flex gap-5  ">
-            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
+          <div className="md:flex gap-5  flex-wrap">
+            <div className="shadow-service bg-yellow-300 md:w-[calc(50%-10px)] lg:w-[calc(25%-15px)]  rounded-2xl">
               <Link to="/product">
                 <img
                   src="https://png.pngtree.com/background/20230808/original/pngtree-digital-devices-for-productivity-laptop-mobile-phone-and-tablet-pc-photo-picture-image_4512002.jpg"
@@ -363,7 +363,7 @@ const Home = () => {
               </Link>
             </div>
 
-            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
+            <div className="shadow-service bg-yellow-300 md:w-[calc(50%-10px)] lg:w-[calc(25%-15px)] rounded-2xl">
               <Link to="/product">
                 <img
                   src="https://images.hindustantimes.com/tech/img/2024/03/23/1600x900/sgddxgfhhc_1711231456166_1711231463102.jpg"
@@ -375,7 +375,7 @@ const Home = () => {
                 </h3>
               </Link>
             </div>
-            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
+            <div className="shadow-service bg-yellow-300 md:w-[calc(50%-10px)] lg:w-[calc(25%-15px)] rounded-2xl">
               <Link to="/product">
                 <img
                   src="https://www.shutterstock.com/image-photo/home-appliances-tv-refrigerator-washing-260nw-2248825351.jpg"
@@ -387,7 +387,7 @@ const Home = () => {
                 </h3>
               </Link>
             </div>
-            <div className="shadow-service bg-yellow-300 md:w-1/4 rounded-2xl">
+            <div className="shadow-service bg-yellow-300 md:w-[calc(50%-10px)] lg:w-[calc(25%-15px)] rounded-2xl">
               <Link to="/product">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixzSyETiHkN2IjpHbF02yRQsU-oXtBk3Ujg&s"
