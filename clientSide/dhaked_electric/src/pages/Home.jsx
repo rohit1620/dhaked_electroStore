@@ -22,7 +22,7 @@ const Home = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".about",
-        start: "top 70%",
+        start: "top 90%",
         end: "top 40%",
         // scrub: 1,
         // markers: true,
@@ -130,95 +130,184 @@ const Home = () => {
           {">"}
         </div>
       </div> */}
+      <div className="hidden lg:block">
+        <Swiper
+          navigation={true}
+          pagination={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          // effect="fade"
+          modules={[Navigation, Pagination, Autoplay]}
+          speed={2000}
+          slidesPerView={1}
+          loop={true}
+          direction="horizontal"
+          // modules={[EffectFade]}
+        >
+          <SwiperSlide>
+            <img
+              src="https://www.coolcareservice.in/public/assets/frontend/images/coolcare-banner-1920x685.jpg"
+              alt="image not found"
+              className="w-full h-[400px]"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.agoanelectronics.in/wp-content/uploads/2023/03/Top-Air-cooler-banner.webp"
+              alt="image not found"
+              className="w-full h-[400px] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.extrahypermarket.com/assets/images/electronics-items-3.jpg"
+              alt="image not found"
+              className="w-full h-[400px] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://image.slidesdocs.com/responsive-images/background/a-modern-white-store-with-various-electronic-products-powerpoint-background_43e72063cd__960_540.jpg"
+              className="w-full h-[400px] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://shop.haierindia.com/blog/wp-content/uploads/2025/01/Know-your-Double-Door-Refrigerator-Dimensions-2-1116x628.jpg.webp"
+              alt="image not found"
+              className="w-full h-[400px] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2025-03/Mixer%20grinder.jpg"
+              alt="image not found"
+              className="w-full h-[400px] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://png.pngtree.com/thumb_back/fh260/background/20230704/pngtree-office-essentials-and-tech-gadgets-mobile-phone-laptop-printer-camera-headphones-image_3748460.jpg"
+              alt="image not found"
+              className="w-full h-[400px]"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://i05.appmifile.com/958_operator_uk/01/04/2026/0fb7ce7fbfd88eb2c60bb01be8ad2473.jpg?thumb=1&w=2560&q=85"
+              alt="image not found"
+              className="w-full h-[400px] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.shutterstock.com/image-illustration/group-home-appliances-consumer-electronics-600nw-2231569777.jpg"
+              alt="image not found"
+              className="w-full h-[400px] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.bajajelectricals.com/cdn/shop/files/GOOD_DESIGN_BANNER.jpg?v=1743600154&width=1400"
+              alt="image not found"
+              className="w-full h-[400px] "
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      {/* mobile ke liye */}
+      <div className="lg:hidden">
+        <Swiper
+          navigation={true}
+          pagination={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          // effect="fade"
+          modules={[Navigation, Pagination, Autoplay]}
+          speed={2000}
+          slidesPerView={1}
+          loop={true}
+          direction="horizontal"
+          // modules={[EffectFade]}
+        >
+          <SwiperSlide>
+            <img
+              src="https://i.pinimg.com/736x/d7/cd/14/d7cd14b1244b7c86898b9ba6b1283704.jpg"
+              alt="image not found"
+              className="w-full h-[70vh] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://st3.depositphotos.com/4475215/16107/i/1600/depositphotos_161072886-stock-photo-home-appliances-group-of-white.jpg"
+              alt="image not found"
+              className="w-full h-[70vh] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ09WYmGNUZ6olROqodIlIS51_VeQLWbm-tRw&s"
+              alt="image not found"
+              className="w-full h-[70vh] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://sansuiworld.com/cdn/shop/files/JSWG43CSFHD_RPD_1.webp?v=1753076465&width=2000"
+              alt="image not found"
+              className="w-full h-[70vh] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://st3.depositphotos.com/4475215/37469/i/1600/depositphotos_374693064-stock-photo-home-appliances-commerce-online-shopping.jpg"
+              alt="image not found"
+              className="w-full h-[70vh] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://img.freepik.com/free-vector/broken-washing-machine-realistic-indoor-composition-with-clothes-washer-water-pouring-out-door_1284-33057.jpg?semt=ais_incoming&w=740&q=80"
+              alt="image not found"
+              className="w-full h-[70vh] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://images.unsplash.com/photo-1767448747239-6b0df47b8ab0?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="image not found"
+              className="w-full h-[70vh] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://image.made-in-china.com/2f0j00RPtBkNCIYUcL/Second-Hand-Cellphone-for-A15-Original-Used-Mobile-Phones-Unlock-Mobile-Phone-Smart-Phone.webp"
+              alt="image not found"
+              className="w-full h-[70vh]"
+            />
+          </SwiperSlide>
 
-      <Swiper
-        navigation={true}
-        pagination={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        // effect="fade"
-        modules={[Navigation, Pagination, Autoplay]}
-        speed={2000}
-        slidesPerView={1}
-        loop={true}
-        direction="horizontal"
-        // modules={[EffectFade]}
-      >
-        <SwiperSlide>
-          <img
-            src="https://www.atlanticdelhi.com/flash_images/5699banner1.png"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://thumbs.dreamstime.com/b/washing-machine-colorful-clothes-spilling-out-showcasing-laundry-day-modern-open-door-revealing-mix-image-371138609.jpg"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&q=80"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://3.imimg.com/data3/TB/KQ/MY-238885/videocon-ha-500x500.jpg"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://5.imimg.com/data5/SELLER/Default/2025/11/557761819/KY/GN/PA/253575770/plywood-tv-unit-500x500.jpg"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2025-03/Mixer%20grinder.jpg"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnruxkS_C-PUdr74zxSYpEWUPzZ0Eyvvsaog&s"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&q=80"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndqL4EUuGrAKHtoEP9lGr8E_qbO5NXBpKQw&s"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://www.maytag.com/is/image/content/dam/business-unit/maytag/en-us/marketing-content/site-assets/page-content/oc-articles/types-of-refrigerators/Types-of-Refrigerators-Image4M_v2.jpg?$atomic-mobile$&fit=constrain&fmt=webp-alpha&qlt=100&bfc=off"
-            alt="image not found"
-            className="w-full h-screen "
-          />
-        </SwiperSlide>
-      </Swiper>
+          <SwiperSlide>
+            <img
+              src="https://cpimg.tistatic.com/11095022/b/4/split-ac..jpg"
+              className="w-full h-[70vh] "
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://www.maytag.com/is/image/content/dam/business-unit/maytag/en-us/marketing-content/site-assets/page-content/oc-articles/types-of-refrigerators/Types-of-Refrigerators-Image4M_v2.jpg?$atomic-mobile$&fit=constrain&fmt=webp-alpha&qlt=100&bfc=off"
+              alt="image not found"
+              className="w-full h-[70vh] "
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
       {/* about store section */}
-      <div className="md:flex px-8  py-20 about">
+      <div className="md:flex px-8  pb-10 md:pb-20 pt-10 about">
         <div className="md:w-1/2 pt-5">
           <h2 className="font-bold text-3xl text-center mb-3 italic">
             About Our Store
