@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { cartData } from "../redux_toolkit/cartSlice";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -14,9 +13,10 @@ import {
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const data = useSelector((state) => state.cart.item);
   let userId = localStorage.getItem("userid");
-  const navigate = useNavigate();
+
   // console.log("navbar", data.length);
   useEffect(() => {
     dispatch(cartData());

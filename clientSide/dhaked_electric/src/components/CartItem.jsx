@@ -8,7 +8,7 @@ const CartItem = ({ item }) => {
   const dispatch = useDispatch();
   // const data = useSelector((state) => state.cart.item);
   const { category, name, image, price, _id } = item?.productId;
-  console.log("item", item.productId);
+  // console.log("item", item.productId);
 
   const productId = _id;
   // const userId = "69b0f75d329c4587a89239d1";
@@ -16,7 +16,7 @@ const CartItem = ({ item }) => {
 
   const removeItem = async () => {
     let data = await api.post("/cart/delete", { userId, productId });
-    console.log("remove item", data);
+    // console.log("remove item", data);
     dispatch(cartData());
   };
 
@@ -26,7 +26,7 @@ const CartItem = ({ item }) => {
       productId,
       quantity: qt,
     });
-    console.log("update item", data);
+    // console.log("update item", data);
     dispatch(cartData());
   };
 

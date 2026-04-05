@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import api from "../api/axios";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux_toolkit/productSlice";
-import productItem from "../components/ProductItem";
+
 import ProductItem from "../components/ProductItem";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -38,6 +38,7 @@ const product = () => {
     };
     getData();
   }, [selectedCategory]);
+
   const handleChange = async (e) => {
     let value = e.target.value;
 

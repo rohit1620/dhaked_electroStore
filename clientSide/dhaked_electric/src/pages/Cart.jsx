@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 const Cart = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.cart.item);
-  console.log("cartdata", data);
+  // console.log("cartdata", data);
   useEffect(() => {
     dispatch(cartData());
   }, []);
