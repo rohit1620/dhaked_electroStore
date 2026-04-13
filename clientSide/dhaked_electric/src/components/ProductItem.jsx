@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { cartData } from "../redux_toolkit/cartSlice";
-import { fetchData } from "../redux_toolkit/productSlice";
+// import { fetchData } from "../redux_toolkit/productSlice";
 import { useNavigate } from "react-router-dom";
 
 import api from "../api/axios";
