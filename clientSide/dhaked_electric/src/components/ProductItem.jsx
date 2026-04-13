@@ -11,7 +11,7 @@ const ProductItem = ({ item }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { image, name, price, category, _id } = item;
-  console.log("item", item);
+  // console.log("item", item);
   // let userId = "69b0f75d329c4587a89239d1";
   let userId = localStorage.getItem("userid");
   let productId = _id;
@@ -24,12 +24,12 @@ const ProductItem = ({ item }) => {
     dispatch(cartData());
     getCartItem();
     // dispatch(fetchData());
-    console.log("cart-item", data);
+    // console.log("cart-item", data);
   };
 
   const getCartItem = async () => {
     let value = await api.get(`/cart/${userId}`);
-    console.log("id", value?.data[0]?.items);
+    // console.log("id", value?.data[0]?.items);
     value = value?.data[0]?.items;
     setCart(value);
   };

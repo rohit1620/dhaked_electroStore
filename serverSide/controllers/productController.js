@@ -50,7 +50,7 @@ const addManyProduct=async(req,res)=>{
 const updateProduct=async(req,res)=>{
     try {
  const {id}=req.params
- console.log(id)
+//  console.log(id)
             await Product.findByIdAndUpdate(id,req.body) ;
             res.status(200).json({"msg":"update successfully"})
     } catch (error) {

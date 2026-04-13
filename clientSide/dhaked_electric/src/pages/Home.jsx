@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import data from "../db.json";
+
+// import data from "../db.json";
 // import Swiper from "swiper";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
