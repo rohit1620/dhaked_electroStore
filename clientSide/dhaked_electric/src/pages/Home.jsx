@@ -1,4 +1,3 @@
-
 // import data from "../db.json";
 // import Swiper from "swiper";
 import { SwiperSlide, Swiper } from "swiper/react";
@@ -13,9 +12,9 @@ import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
-let datas = data.electronics;
+// let datas = data.electronics;
 
-console.log(datas.length);
+// console.log(datas.length);
 
 const Home = () => {
   useGSAP(() => {
